@@ -1,157 +1,70 @@
-<a name="readme-top"></a>
+# Getting Started with Create React App
 
-<div align="center">
-  <img src="./src/logo.svg" alt="logo" width="140"  height="auto" />
-  <br/>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-  <h3><b>The Bookstore - Async Redux Reading List</b></h3>
+## Available Scripts
 
-</div>
+In the project directory, you can run:
 
-<!-- TABLE OF CONTENTS -->
+### `npm start`
 
-# 📗 Table of Contents
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-<!-- PROJECT DESCRIPTION -->
+### `npm test`
 
-# 📖 The Bookstore - React Book reading list <a name="about-project"></a>
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-**The Bookstore** is a website that allows you to: Display a list of books, Add a book, and Remove a selected book
+### `npm run build`
 
-## 🛠 Built With <a name="built-with"></a>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Tech Stack <a name="tech-stack"></a>
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href=https://legacy.reactjs.org/docs/introducing-jsx.html>JSX</a></li>
-    <li><a href="https://sass-lang.com">SASS - SCSS</a></li>
-    <li><a href="https://reactjs.org/">React</a></li>
-  </ul>
-</details>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<!-- Features -->
+### `npm run eject`
 
-### Key Features <a name="key-features"></a>
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- **Full React app**
-- **Add, Remove, and Fetch async logic**
-- **Use of Modular CSS**
-- **Use of react components**
-- **Use of react Router and NavLink**
-- **Use of Redux AsyncThunk for API consumption**
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-<!-- GETTING STARTED -->
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## 💻 Getting Started <a name="getting-started"></a>
+## Learn More
 
-To get a local copy up and running, follow these steps.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Prerequisites
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-To run this project you need:
+### Code Splitting
 
-- VSCode
-- Node
-- Web Browser
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Setup
+### Analyzing the Bundle Size
 
-Make sure you have VSCode, Node and a Web Browser installed
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
 
-### Install
-In the root folder, run the script `npm install` to install all the libraries necessary.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Make sure eslint-config-airbnb is installed or install with:
+### Advanced Configuration
 
-`npm install eslint-config-airbnb eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-import --save-dev`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
 
-### Preview
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-#### How to Run it
-- Run the script `npm start` to see a working version of the project
+### `npm run build` fails to minify
 
-
-### Run tests
-
-Use the scripts: 
-- `npm run test` to run your tests
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-👤 **Esteban Palacios**
-
-- GitHub: [@Estete9](https://github.com/Estete9)
-- Twitter: [@NaughTban](https://twitter.com/NaughTban)
-- LinkedIn: [Esteban Palacios](https://www.linkedin.com/in/esteban-palacios-5030a772/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- **Implement a local storage that saves and loads book information**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page UPDATE URL HERE](https://github.com/Estete9/https://github.com/Estete9/bookstore-react/issues/issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-
-If you like this project remember to star and share it 🥳️
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-
-- ACKNOWLEDGMENTS TO CREATIVE LICENSE AND OTHERS
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./MIT.md)-licensed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
