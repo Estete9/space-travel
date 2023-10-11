@@ -2,6 +2,7 @@ import {
   BrowserRouter as Router, Routes, Route, Outlet,
 } from 'react-router-dom';
 import './App.css';
+import RocketsScreen from './components/RocketsScreen';
 import MyPage from './components/MyPage';
 
 import Header from './components/Header';
@@ -17,7 +18,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<MyPage />} />
+            <Route index element={<RocketsScreen />} />
+            <Route path="profile" element={<MyPage />} />
           </Route>
         </Routes>
       </div>
