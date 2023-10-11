@@ -3,8 +3,8 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import RocketsScreen from './components/RocketsScreen';
+import MissionsList from './components/MissionsList';
 import MyPage from './components/MyPage';
-
 import Header from './components/Header';
 
 function Layout() {
@@ -18,6 +18,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route path="missions" element={<MissionsList />} />
             <Route index element={<RocketsScreen />} />
             <Route path="profile" element={<MyPage />} />
           </Route>
