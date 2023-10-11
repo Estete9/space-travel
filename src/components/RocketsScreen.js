@@ -4,12 +4,13 @@ import { fetchRocketsAPI } from '../redux/rockets/RocketsSlice';
 
 const RocketsScreen = () => {
   const dispatch = useDispatch();
-
   const { rocketsData, isLoading, error } = useSelector((store) => store.rockets);
 
   useEffect(() => {
-    dispatch(fetchRocketsAPI());
-  }, [dispatch]);
+    if (isLoading && !rocketsData.length) {
+      dispatch(fetchRocketsAPI());
+    }
+  }, [dispatch, isLoading, rocketsData.length]);
 
   if (isLoading) {
     return <div>Users loading...</div>;
