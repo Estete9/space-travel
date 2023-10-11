@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRocketsAPI } from '../redux/rockets/RocketsSlice';
 import RocketItem from './RocketItem';
 import styles from '../styles/rocketsScreen.module.css';
+// import reserveRocket from '../redux/rockets/RocketsSlice';
 
 const RocketsScreen = () => {
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ const RocketsScreen = () => {
         {rocketsData.map((rocket) => (
           <li key={rocket.rocket_id} className={styles.rocketItemWrapper}>
             <RocketItem
-              id={rocket.rocket_id}
+              rocketId={rocket.rocket_id}
               rocketName={rocket.rocket_name}
               rocketDescription={rocket.description}
               flickrImages={rocket.flickr_images[0]}
