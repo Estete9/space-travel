@@ -1,6 +1,8 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRocketsAPI } from '../redux/rockets/RocketsSlice';
+import RocketItem from './RocketItem';
+import styles from '../styles/rocketsScreen.module.css';
 
 const RocketsScreen = () => {
   const dispatch = useDispatch();
@@ -33,7 +35,18 @@ const RocketsScreen = () => {
 
   return (
     <div>
-      <div>this is Rocket screen</div>
+      <ul>
+        {rocketsData.map((rocket) => (
+          <li key={rocket.rocket_id} className={styles.rocketItemWrapper}>
+            <RocketItem
+              id={rocket.rocket_id}
+              rocketName={rocket.rocket_name}
+              rocketDescription={rocket.description}
+              flickrImages={rocket.flickr_images[0]}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
