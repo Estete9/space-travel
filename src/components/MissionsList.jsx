@@ -4,16 +4,14 @@ import Missions from './Missions';
 import { fetchMissions } from '../redux/missions/missionsSlice';
 
 function MissionsList() {
-  const { missions } = useSelector((state) => state.missions);
+  const { missions, isLoading } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
-
-  useEffect(() => {
-    console.log(missions);
-  }, [missions]);
+    if (isLoading && !missions.length) {
+      dispatch(fetchMissions());
+    }
+  }, [dispatch, isLoading, missions.length]);
 
   return (
     <table className="table">
