@@ -7,8 +7,8 @@ export const fetchRocketsAPI = createAsyncThunk(
   'rockets/fetchRocketsAPI',
   async (_, { rejectWithValue }) => {
     try {
-      const response = axios.get(url);
-      return (await response).data;
+      const response = await axios.get(url);
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.response);
     }
@@ -31,6 +31,7 @@ const RocketsSlice = createSlice({
         store.isLoading = true;
       })
       .addCase(fetchRocketsAPI.fulfilled, (store, action) => {
+        console.log('action.payload: ', action.payload);
         store.rocketsData = action.payload;
         store.isLoading = false;
       })
