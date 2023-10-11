@@ -1,8 +1,8 @@
 .rocketItem {
   display: flex;
-  border: red solid 1px;
-  padding: 10px 50px;
+  padding: 15px 0;
   gap: 15px;
+  flex: auto;
 }
 
 .rocketImg {
@@ -17,4 +17,9 @@
 
 .reserveBtn {
   margin-right: auto;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  background-color: #027bff;
+  color: #fff;
 }
