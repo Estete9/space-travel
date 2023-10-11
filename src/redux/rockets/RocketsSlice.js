@@ -31,7 +31,6 @@ const RocketsSlice = createSlice({
         store.isLoading = true;
       })
       .addCase(fetchRocketsAPI.fulfilled, (store, action) => {
-        console.log('action.payload: ', action.payload);
         store.rocketsData = action.payload;
         store.isLoading = false;
       })
