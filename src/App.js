@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Routes, Route, Outlet,
+} from 'react-router-dom';
 import './App.css';
 import MyPage from './components/MyPage';
 
@@ -24,4 +26,3 @@ function App() {
 }
 
 export default App;
-
