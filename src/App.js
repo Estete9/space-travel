@@ -1,6 +1,4 @@
-import {
-  BrowserRouter as Router, Routes, Route, Outlet,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
 import MyPage from './components/MyPage';
 
@@ -17,7 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<MyPage />} />
+            <Route path="profile" element={<MyPage />} />
           </Route>
         </Routes>
       </div>
@@ -26,3 +24,4 @@ function App() {
 }
 
 export default App;
+
