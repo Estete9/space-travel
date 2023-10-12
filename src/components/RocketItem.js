@@ -10,7 +10,8 @@ function RocketItem({
 }) {
   const dispatch = useDispatch();
   const { rocketsData } = useSelector((store) => store.rockets);
-  const [isReserved, setIsReserved] = useState(false);
+  const currentRocket = rocketsData.find((rocket) => rocket.rocket_id === rocketId);
+  const [isReserved, setIsReserved] = useState(currentRocket.reserved);
 
   const handleClick = () => {
     const selectedRocketData = rocketsData.find((rocket) => rocket.rocket_id === rocketId);

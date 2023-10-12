@@ -17,7 +17,7 @@ export const fetchRocketsAPI = createAsyncThunk(
 
 const initialState = {
   rocketsData: [],
-  isLoading: true,
+  isLoadingRockets: true,
   error: null,
 };
 
@@ -49,15 +49,15 @@ const RocketsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchRocketsAPI.pending, (store) => {
-        store.isLoading = true;
+        store.isLoadingRockets = true;
       })
       .addCase(fetchRocketsAPI.fulfilled, (store, action) => {
         store.rocketsData = action.payload;
-        store.isLoading = false;
+        store.isLoadingRockets = false;
       })
       .addCase(fetchRocketsAPI.rejected, (store, action) => {
         store.error = action.payload;
-        store.isLoading = false;
+        store.isLoadingRockets = false;
       });
   },
 });
