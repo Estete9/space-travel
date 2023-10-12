@@ -26,7 +26,6 @@ const RocketsSlice = createSlice({
   initialState,
   reducers: {
     reserveRocket: (store, action) => {
-      console.log('store', JSON.stringify(store));
       const rocketId = action.payload;
       const updatedList = store.rocketsData.map((rocket) => {
         if (rocket.rocket_id !== rocketId) {
@@ -35,7 +34,6 @@ const RocketsSlice = createSlice({
         return { ...rocket, reserved: true };
       });
       store.rocketsData = updatedList;
-      console.log('new store', JSON.stringify(store));
     },
   },
   extraReducers: (builder) => {
