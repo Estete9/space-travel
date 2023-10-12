@@ -24,3 +24,13 @@
   color: #fff;
   cursor: pointer;
 }
+
+.cancelBtn {
+  margin-right: auto;
+  padding: 10px 22px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #bcbbbb;
+  color: #bcbbbb;
+  cursor: pointer;
+}

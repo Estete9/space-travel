@@ -21,7 +21,7 @@ const Header = () => {
           <ul>
             {links.map((link) => (
               <li key={link.text.toLowerCase()}>
-                <NavLink to={link.path} classname="active">{link.text}</NavLink>
+                <NavLink to={link.path}>{link.text}</NavLink>
               </li>
             ))}
           </ul>
