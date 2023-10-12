@@ -8,9 +8,10 @@ import '../styles/MissionsList.css';
 function MissionsList() {
   const { missions } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
+
   useEffect(() => {
     if (missions.length === 0) dispatch(fetchMissions());
-  }, []);
+  }, [missions, dispatch]);
 
   return (
     <table className="table">
