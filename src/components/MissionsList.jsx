@@ -1,18 +1,16 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Missions from './Missions';
 import { fetchMissions } from '../redux/missions/missionsSlice';
 import '../styles/MissionsList.css';
 
 function MissionsList() {
-  const { missions, isLoading } = useSelector((state) => state.missions);
+  const { missions } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
-
   useEffect(() => {
-    if (isLoading && !missions.length) {
-      dispatch(fetchMissions());
-    }
-  }, [dispatch, isLoading, missions.length]);
+    if (missions.length === 0) dispatch(fetchMissions());
+  }, []);
 
   return (
     <table className="table">
@@ -27,8 +25,10 @@ function MissionsList() {
         {missions.map((mission) => (
           <Missions
             key={mission.mission_id}
+            id={mission.mission_id}
             name={mission.mission_name}
             description={mission.description}
+            activeMember={mission.activeMember || false}
           />
         ))}
       </tbody>
