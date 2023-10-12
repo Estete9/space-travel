@@ -25,10 +25,6 @@ td:nth-child(1) {
   padding: 0.3rem;
 }
 
-td:nth-child(2) {
-  padding: 0.3rem;
-}
-
 tbody tr:nth-child(odd) {
   background-color: #f2f3f3;
 }
