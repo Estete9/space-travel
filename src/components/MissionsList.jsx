@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Missions from './Missions';
 import { fetchMissions } from '../redux/missions/missionsSlice';
+import '../styles/MissionsList.css';
 
 function MissionsList() {
   const { missions, isLoading } = useSelector((state) => state.missions);
@@ -20,14 +21,12 @@ function MissionsList() {
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th> </th>
         </tr>
       </thead>
       <tbody>
         {missions.map((mission) => (
           <Missions
             key={mission.mission_id}
-            id={mission.mission_id}
             name={mission.mission_name}
             description={mission.description}
           />
