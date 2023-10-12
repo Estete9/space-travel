@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/planet.png';
+import '../styles/header.css';
 
 const Header = () => {
   const links = [
@@ -11,13 +12,16 @@ const Header = () => {
 
   return (
     <div>
-      <header>
+      <header className="header">
+        <div>
+          <img src={Logo} alt="logo" />
+          <h1>Space Traveler&apos;s Hub</h1>
+        </div>
         <nav>
-          <img src={Logo} alt="Logo" />
           <ul>
             {links.map((link) => (
               <li key={link.text.toLowerCase()}>
-                <NavLink to={link.path}>{link.text}</NavLink>
+                <NavLink to={link.path} classname="active">{link.text}</NavLink>
               </li>
             ))}
           </ul>
