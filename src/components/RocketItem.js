@@ -28,7 +28,6 @@ function RocketItem({
       <img src={flickrImages} alt={`${rocketName} rocket`} className={styles.rocketImg} />
       <div className={styles.rocketContent}>
         <h3 className={styles.rocketName}>{rocketName}</h3>
-
         <p className={styles.rocketDescription}>
           {isReserved && <RocketBadge />}
           {rocketDescription}
