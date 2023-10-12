@@ -1,13 +1,23 @@
 import { React } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import styles from '../styles/rocketItem.module.css';
-import { reserveRocket } from '../redux/rockets/RocketsSlice';
+import { reserveRocket, cancelReservation } from '../redux/rockets/RocketsSlice';
 
 function RocketItem({
   rocketId, rocketName, rocketDescription, flickrImages,
 }) {
   const dispatch = useDispatch();
+  const { rocketsData } = useSelector((store) => store.rockets);
+
+  const handleClick = () => {
+    const selectedRocketData = rocketsData.find((rocket) => rocket.rocket_id === rocketId);
+    if (!selectedRocketData.reserved) {
+      dispatch(reserveRocket(rocketId));
+      return;
+    }
+    dispatch(cancelReservation(rocketId));
+  };
 
   return (
     <div className={styles.rocketItem}>
@@ -15,11 +25,7 @@ function RocketItem({
       <div className={styles.rocketContent}>
         <h3 className={styles.rocketName}>{rocketName}</h3>
         <p className={styles.rocketDescription}>{rocketDescription}</p>
-        <button
-          className={styles.reserveBtn}
-          type="button"
-          onClick={() => dispatch(() => dispatch(reserveRocket(rocketId)))}
-        >
+        <button className={styles.reserveBtn} type="button" onClick={handleClick}>
           Reserve Rocket
         </button>
       </div>
