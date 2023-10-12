@@ -29,7 +29,7 @@ function MissionsList() {
             id={mission.mission_id}
             name={mission.mission_name}
             description={mission.description}
-            activeMember={mission.activeMember || false}
+            reserved={mission.reserved || false}
           />
         ))}
       </tbody>

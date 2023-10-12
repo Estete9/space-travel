@@ -4,7 +4,7 @@ import { member } from '../redux/missions/missionsSlice';
 import '../styles/Missions.css';
 
 function Missions({
-  name, description, id, activeMember,
+  name, description, id, reserved,
 }) {
   const dispatch = useDispatch();
   return (
@@ -12,17 +12,17 @@ function Missions({
       <td>{name}</td>
       <td>{description}</td>
       <td>
-        <p className={activeMember ? 'activeMember status' : 'notActive status'}>{activeMember ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</p>
+        <p className={reserved ? 'activeMember status' : 'notActive status'}>{reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</p>
       </td>
       <td>
         <button
           type="button"
-          className={activeMember ? 'leaveBtn status' : 'joinBtn status'}
+          className={reserved ? 'leaveBtn status' : 'joinBtn status'}
           onClick={() => {
             dispatch(member(id));
           }}
         >
-          {activeMember ? 'Leave Mission' : 'Join Mission'}
+          {reserved ? 'Leave Mission' : 'Join Mission'}
         </button>
       </td>
     </tr>
@@ -33,7 +33,7 @@ Missions.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  activeMember: PropTypes.bool.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default Missions;

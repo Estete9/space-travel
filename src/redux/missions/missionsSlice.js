@@ -26,7 +26,7 @@ const missionsSlice = createSlice({
     member: (state, action) => {
       const missionId = action.payload;
       state.missions = state.missions.map((mission) => (mission.mission_id === missionId
-        ? { ...mission, activeMember: !mission?.activeMember ?? true }
+        ? { ...mission, reserved: !mission?.reserved ?? true }
         : mission));
     },
   },
