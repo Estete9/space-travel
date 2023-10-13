@@ -4,9 +4,7 @@ import { Provider } from 'react-redux';
 import { waitFor } from '@testing-library/react';
 import axios from 'axios';
 import configureStore from 'redux-mock-store';
-// import { setupServer } from 'msw/node';
 import RocketsScreen from '../components/RocketsScreen';
-// import handlers from './mocks/handlers';
 
 jest.mock('axios');
 
