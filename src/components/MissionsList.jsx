@@ -9,8 +9,10 @@ function MissionsList() {
   const { missions } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (missions.length === 0) dispatch(fetchMissions());
-  }, []);
+    if (missions.length === 0) {
+      dispatch(fetchMissions());
+    }
+  }, [dispatch, missions.length]);
 
   return (
     <table className="table">
