@@ -16,7 +16,7 @@ const RocketsScreen = () => {
   }, [dispatch, isLoadingRockets, rocketsData.length]);
 
   if (isLoadingRockets) {
-    return <div>Users loading...</div>;
+    return <div>Rockets list loading...</div>;
   }
 
   if (error) {
