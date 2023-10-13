@@ -40,11 +40,11 @@ header li:nth-child(2) {
 a {
   font-size: 1.5rem;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #077DFF;
 }
 
 .active {
   text-decoration: underline;
-  color: rgb(0, 0, 0);
+  color: #045ebe;
   font-weight: bolder;
 }

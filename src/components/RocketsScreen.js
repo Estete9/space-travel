@@ -7,15 +7,15 @@ import styles from '../styles/rocketsScreen.module.css';
 
 const RocketsScreen = () => {
   const dispatch = useDispatch();
-  const { rocketsData, isLoading, error } = useSelector((store) => store.rockets);
+  const { rocketsData, isLoadingRockets, error } = useSelector((store) => store.rockets);
 
   useEffect(() => {
-    if (isLoading && !rocketsData.length) {
+    if (isLoadingRockets && !rocketsData.length) {
       dispatch(fetchRocketsAPI());
     }
-  }, [dispatch, isLoading, rocketsData.length]);
+  }, [dispatch, isLoadingRockets, rocketsData.length]);
 
-  if (isLoading) {
+  if (isLoadingRockets) {
     return <div>Users loading...</div>;
   }
 
