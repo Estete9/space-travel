@@ -10,7 +10,7 @@ const MyProfile = () => {
   const { missions } = useSelector((state) => state.missions);
   const { rocketsData } = useSelector((store) => store.rockets);
   const activeMissions = missions.filter((active) => active.reserved);
-  const reservedRockets = rocketsData.filter((rocket) => rocket.reserved);
+  const reservedRockets = rocketsData.filter((rocket) => rocket.isReserved);
 
   useEffect(() => {
     if (missions.length === 0) {

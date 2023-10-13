@@ -11,7 +11,7 @@ const RocketsScreen = () => {
 
   const handleClick = (rocketId) => {
     const isReserved = rocketsReserved.includes(rocketId);
-    if (isReserved) {
+    if (!isReserved) {
       dispatch(reserveRocket(rocketId));
       setRocketsReserved([...rocketsReserved, rocketId]);
     } else {
@@ -27,7 +27,7 @@ const RocketsScreen = () => {
   }, [dispatch, isLoadingRockets, rocketsData.length]);
 
   if (isLoadingRockets) {
-    return <div>Users loading...</div>;
+    return <div>Rockets loading...</div>;
   }
 
   if (error) {
@@ -55,6 +55,7 @@ const RocketsScreen = () => {
               rocketName={rocket.rocket_name}
               rocketDescription={rocket.description}
               flickrImages={rocket.flickr_images[0]}
+              isReserved={rocket.isReserved} // Make sure it's passed
               onClick={handleClick}
             />
           </li>

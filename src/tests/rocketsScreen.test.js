@@ -48,7 +48,67 @@ describe('Confirm that RocketsScreen renders correctly when: ', () => {
 
     const container = renderer.create(component);
 
-    await new Promise((resolve) => setTimeout(resolve, 0));
+    const rocketScreenTree = container.toJSON();
+
+    await waitFor(() => {
+      expect(rocketScreenTree).toMatchSnapshot();
+    });
+  });
+
+  test('store is empty', async () => {
+    const mockData = [];
+    axios.get.mockResolvedValue({ data: mockData });
+
+    const mockStore = configureStore();
+    const initialState = {
+      // Define your initial state here based on your reducers
+      rockets: {
+        rocketsData: mockData,
+        isLoadingRockets: false,
+        error: null,
+      },
+    };
+
+    const store = mockStore(initialState);
+
+    const component = (
+      <Provider store={store}>
+        <RocketsScreen />
+      </Provider>
+    );
+
+    const container = renderer.create(component);
+
+    const rocketScreenTree = container.toJSON();
+
+    await waitFor(() => {
+      expect(rocketScreenTree).toMatchSnapshot();
+    });
+  });
+  test('page is loading', async () => {
+    const mockData = [];
+    axios.get.mockResolvedValue({ data: mockData });
+
+    const mockStore = configureStore();
+    const initialState = {
+      // Define your initial state here based on your reducers
+      rockets: {
+        rocketsData: mockData,
+        isLoadingRockets: true,
+        error: null,
+      },
+    };
+
+    const store = mockStore(initialState);
+
+    const component = (
+      <Provider store={store}>
+        <RocketsScreen />
+      </Provider>
+    );
+
+    const container = renderer.create(component);
+
     const rocketScreenTree = container.toJSON();
 
     await waitFor(() => {
