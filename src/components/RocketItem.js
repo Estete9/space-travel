@@ -1,29 +1,16 @@
-import { React, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { React } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/rocketItem.module.css';
-import { reserveRocket, cancelReservation } from '../redux/rockets/RocketsSlice';
 import RocketBadge from './RocketBadge';
 
 function RocketItem({
-  rocketId, rocketName, rocketDescription, flickrImages,
+  rocketId,
+  rocketName,
+  rocketDescription,
+  flickrImages,
+  isReserved,
+  onClick,
 }) {
-  const dispatch = useDispatch();
-  const { rocketsData } = useSelector((store) => store.rockets);
-  const currentRocket = rocketsData.find((rocket) => rocket.rocket_id === rocketId);
-  const [isReserved, setIsReserved] = useState(currentRocket.reserved);
-
-  const handleClick = () => {
-    const selectedRocketData = rocketsData.find((rocket) => rocket.rocket_id === rocketId);
-    if (!selectedRocketData.reserved) {
-      dispatch(reserveRocket(rocketId));
-      setIsReserved(true);
-      return;
-    }
-    dispatch(cancelReservation(rocketId));
-    setIsReserved(false);
-  };
-
   return (
     <div className={styles.rocketItem}>
       <img src={flickrImages} alt={`${rocketName} rocket`} className={styles.rocketImg} />
@@ -34,12 +21,12 @@ function RocketItem({
           {rocketDescription}
         </p>
         {!isReserved && (
-          <button className={styles.reserveBtn} type="button" onClick={handleClick}>
+          <button className={styles.reserveBtn} type="button" onClick={() => onClick(rocketId)}>
             Reserve Rocket
           </button>
         )}
         {isReserved && (
-          <button className={styles.cancelBtn} type="button" onClick={handleClick}>
+          <button className={styles.cancelBtn} type="button" onClick={() => onClick(rocketId)}>
             Cancel Reservation
           </button>
         )}
@@ -53,6 +40,9 @@ RocketItem.propTypes = {
   rocketName: PropTypes.string.isRequired,
   rocketDescription: PropTypes.string.isRequired,
   flickrImages: PropTypes.string.isRequired,
+  isReserved: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default RocketItem;
+
