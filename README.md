@@ -1,12 +1,10 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./src/logo.svg" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>The Bookstore - Async Redux Reading List</b></h3>
-
+    <h1><b>Space-travel</b></h1>
 </div>
+
+---
 
 <!-- TABLE OF CONTENTS -->
 
@@ -17,11 +15,12 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -29,35 +28,69 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
+---
+
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 The Bookstore - React Book reading list <a name="about-project"></a>
+# Space-Travel<a name="about-project"></a>
 
-**The Bookstore** is a website that allows you to: Display a list of books, Add a book, and Remove a selected book
+**Space-Travel** In this task, we will be working with the real live data from the SpaceX API. we task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+
+#### Learning objectives
+
+- Use React documentation
+- Use React components.
+- Use React props.
+- Use React state.
+- Use React routes.
+- Connect React and Redux.
+- Handle events in a React app.
+- Write unit tests with React Testing Library.
+- Use styles in a React app.
+- Use React hooks.
+- Apply React best practices and language style guides in code.
+- Use store, actions and reducers in React.
+- Perform a code review for a team member.
+
+---
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Client</summary>
   <ul>
-    <li><a href=https://legacy.reactjs.org/docs/introducing-jsx.html>JSX</a></li>
-    <li><a href="https://sass-lang.com">SASS - SCSS</a></li>
-    <li><a href="https://reactjs.org/">React</a></li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=react"/>
+       <a href="https://react.dev/">React.js</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=jest"/>
+       <a href="https://jestjs.io/">Jest</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=redux"/>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/Redux">Redux</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=js"/>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=html"/>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
+     </li>
   </ul>
-</details>
+
+---
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **Full React app**
-- **Add, Remove, and Fetch async logic**
-- **Use of Modular CSS**
-- **Use of react components**
-- **Use of react Router and NavLink**
-- **Use of Redux AsyncThunk for API consumption**
+- **Add Redux Toolkit (npm install react-redux @reduxjs/toolkit).**
+- **Create a directory that will contain all your Redux logic (/src/redux)**
+- **Configure a Redux store (/src/redux/store.js)**
+- **Gitflow**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,46 +98,65 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+> To get a local copy up and running, follow these steps.
+> This project requires Node.js and npm installed on your machine.
 
 ### Prerequisites
 
-To run this project you need:
-
-- VSCode
-- Node
-- Web Browser
+In order to run this project you need:
 
 ### Setup
 
-Make sure you have VSCode, Node and a Web Browser installed
+Clone this repository to your desired folder:
 
+Example commands:
+
+```bash
+  cd space-travel
+  git clone https://github.com/Estete9/space-travel.git
+```
 
 ### Install
-In the root folder, run the script `npm install` to install all the libraries necessary.
 
-Make sure eslint-config-airbnb is installed or install with:
+Install this project's dependencies with:
 
-`npm install eslint-config-airbnb eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-import --save-dev`
+- npm install
 
+### Usage
 
-### Preview
+To run the project, execute the following command:
 
-#### How to Run it
-- Run the script `npm start` to see a working version of the project
+```bash
+ npm run start
+```
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
 ### Run tests
 
-Use the scripts: 
-- `npm run test` to run your tests
+```bash
+  npm test
+```
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+
+👤 **Maximo Ortelli**
+
+- GitHub: [@maximoortelli](https://github.com/maximoortelli)
+- LinkedIn: [Maximo Ortelli](https://www.linkedin.com/in/maximo-ortelli-rueda-265228203/)
 
 👤 **Esteban Palacios**
 
@@ -114,13 +166,17 @@ Use the scripts:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Implement a local storage that saves and loads book information**
+- [x] **Improve the Space-Travel page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
 
 <!-- CONTRIBUTING -->
 
@@ -128,30 +184,36 @@ Use the scripts:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page UPDATE URL HERE](https://github.com/Estete9/https://github.com/Estete9/bookstore-react/issues/issues).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
 
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
-If you like this project remember to star and share it 🥳️
+Give a ⭐ if you liked this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I thank Microverse for this fantastic opportunity.
 
-- ACKNOWLEDGMENTS TO CREATIVE LICENSE AND OTHERS
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md)-licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
