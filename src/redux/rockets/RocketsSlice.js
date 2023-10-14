@@ -31,7 +31,7 @@ const RocketsSlice = createSlice({
         if (rocket.rocket_id !== rocketId) {
           return rocket;
         }
-        return { ...rocket, reserved: true };
+        return { ...rocket, isReserved: true };
       });
       store.rocketsData = updatedList;
     },
@@ -41,7 +41,7 @@ const RocketsSlice = createSlice({
         if (rocket.rocket_id !== rocketId) {
           return rocket;
         }
-        return { ...rocket, reserved: false };
+        return { ...rocket, isReserved: false };
       });
       store.rocketsData = updatedList;
     },
@@ -52,7 +52,11 @@ const RocketsSlice = createSlice({
         store.isLoadingRockets = true;
       })
       .addCase(fetchRocketsAPI.fulfilled, (store, action) => {
-        store.rocketsData = action.payload;
+        const rocketsWithReservation = action.payload.map((rocket) => ({
+          ...rocket,
+          isReserved: false,
+        }));
+        store.rocketsData = rocketsWithReservation;
         store.isLoadingRockets = false;
       })
       .addCase(fetchRocketsAPI.rejected, (store, action) => {

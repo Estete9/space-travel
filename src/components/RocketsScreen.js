@@ -1,13 +1,24 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRocketsAPI } from '../redux/rockets/RocketsSlice';
+import { fetchRocketsAPI, reserveRocket, cancelReservation } from '../redux/rockets/RocketsSlice';
 import RocketItem from './RocketItem';
 import styles from '../styles/rocketsScreen.module.css';
-// import reserveRocket from '../redux/rockets/RocketsSlice';
 
 const RocketsScreen = () => {
   const dispatch = useDispatch();
   const { rocketsData, isLoadingRockets, error } = useSelector((store) => store.rockets);
+  const [rocketsReserved, setRocketsReserved] = useState([]);
+
+  const handleClick = (rocketId) => {
+    const isReserved = rocketsReserved.includes(rocketId);
+    if (!isReserved) {
+      dispatch(reserveRocket(rocketId));
+      setRocketsReserved([...rocketsReserved, rocketId]);
+    } else {
+      dispatch(cancelReservation(rocketId));
+      setRocketsReserved(rocketsReserved.filter((id) => rocketId !== id));
+    }
+  };
 
   useEffect(() => {
     if (isLoadingRockets && !rocketsData.length) {
@@ -16,7 +27,7 @@ const RocketsScreen = () => {
   }, [dispatch, isLoadingRockets, rocketsData.length]);
 
   if (isLoadingRockets) {
-    return <div>Rockets list loading...</div>;
+    return <div>Rockets loading...</div>;
   }
 
   if (error) {
@@ -44,6 +55,8 @@ const RocketsScreen = () => {
               rocketName={rocket.rocket_name}
               rocketDescription={rocket.description}
               flickrImages={rocket.flickr_images[0]}
+              isReserved={rocket.isReserved} // Make sure it's passed
+              onClick={handleClick}
             />
           </li>
         ))}
