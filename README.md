@@ -90,8 +90,6 @@
 - **Add Redux Toolkit (npm install react-redux @reduxjs/toolkit).**
 - **Create a directory that will contain all your Redux logic (/src/redux)**
 - **Configure a Redux store (/src/redux/store.js)**
-- **Define a slice of state for books that**
-- **Add 2 routes in your application, each should render a page component**
 - **Gitflow**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
