@@ -1,6 +1,5 @@
-import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Missions from './Missions';
 import { fetchMissions } from '../redux/missions/missionsSlice';
 import '../styles/MissionsList.css';
