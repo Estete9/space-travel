@@ -112,7 +112,7 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```bash
-  cd booklist
+  cd space-travel
   git clone https://github.com/Estete9/space-travel.git
 ```
 
