@@ -1,12 +1,136 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+    <h1><b>Space-travel</b></h1>
+</div>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `npm start`
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+---
+
+<!-- PROJECT DESCRIPTION -->
+
+# Space-Travel<a name="about-project"></a>
+
+**Space-Travel** In this task, we will be working with the real live data from the SpaceX API. we task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+
+#### Learning objectives
+
+- Use React documentation
+- Use React components.
+- Use React props.
+- Use React state.
+- Use React routes.
+- Connect React and Redux.
+- Handle events in a React app.
+- Write unit tests with React Testing Library.
+- Use styles in a React app.
+- Use React hooks.
+- Apply React best practices and language style guides in code.
+- Use store, actions and reducers in React.
+- Perform a code review for a team member.
+
+---
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+  <ul>
+     <li>
+       <img src="https://skillicons.dev/icons?i=react"/>
+       <a href="https://react.dev/">React.js</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=jest"/>
+       <a href="https://jestjs.io/">Jest</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=redux"/>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/Redux">Redux</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=js"/>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+     </li>
+     <li>
+       <img src="https://skillicons.dev/icons?i=html"/>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
+     </li>
+  </ul>
+
+---
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Add Redux Toolkit (npm install react-redux @reduxjs/toolkit).**
+- **Create a directory that will contain all your Redux logic (/src/redux)**
+- **Configure a Redux store (/src/redux/store.js)**
+- **Define a slice of state for books that**
+- **Add 2 routes in your application, each should render a page component**
+- **Gitflow**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> To get a local copy up and running, follow these steps.
+> This project requires Node.js and npm installed on your machine.
+
+### Prerequisites
+
+In order to run this project you need:
+
+### Setup
+
+Clone this repository to your desired folder:
+
+Example commands:
+
+```bash
+  cd booklist
+  git clone https://github.com/Estete9/space-travel.git
+```
+
+### Install
+
+Install this project's dependencies with:
+
+- npm install
+
+### Usage
+
+To run the project, execute the following command:
+
+```bash
+ npm run start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +138,84 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### Run tests
+
+```bash
+  npm test
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- AUTHORS -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 👥 Authors <a name="authors"></a>
 
-### `npm run eject`
+👤 **Maximo Ortelli**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- GitHub: [@maximoortelli](https://github.com/maximoortelli)
+- LinkedIn: [Maximo Ortelli](https://www.linkedin.com/in/maximo-ortelli-rueda-265228203/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👤 **Esteban Palacios**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- GitHub: [@Estete9](https://github.com/Estete9)
+- Twitter: [@NaughTban](https://twitter.com/NaughTban)
+- LinkedIn: [Esteban Palacios](https://www.linkedin.com/in/esteban-palacios-5030a772/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- FUTURE FEATURES -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔭 Future Features <a name="future-features"></a>
 
-### Code Splitting
+- [x] **Improve the Space-Travel page**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- CONTRIBUTING -->
 
-### Making a Progressive Web App
+## 🤝 Contributing <a name="contributing"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions, issues, and feature requests are welcome!
 
-### Advanced Configuration
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+<!-- SUPPORT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## ⭐️ Show your support <a name="support"></a>
 
-### `npm run build` fails to minify
+Give a ⭐ if you liked this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I thank Microverse for this fantastic opportunity.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
