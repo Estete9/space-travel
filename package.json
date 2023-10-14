@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.4.2",
     "redux-toolkit": "^1.1.2",
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
